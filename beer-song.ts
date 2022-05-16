@@ -17,7 +17,7 @@ export function sing(
   let res = '';
   let currentBottlesCount = initialBottlesCount;
   while (currentBottlesCount >= takeDownCount) {
-    res += `${verse(currentBottlesCount)}`;
+    res += `${verse(currentBottlesCount)}${currentBottlesCount === takeDownCount ? '' : '\n'}`;
     currentBottlesCount--;
   }
   return res;
